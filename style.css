@@ -68,3 +68,170 @@ body {
 #game-view-pane p {
     color: #555;
 }
+
+/* Hangman Game Styles */
+#hangman-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Adds space between elements */
+}
+
+#word-display {
+    font-size: 2em; /* Makes the word display larger */
+    letter-spacing: 5px; /* Adds spacing between letters/underscores */
+    margin-bottom: 10px; /* Adds some space below the word */
+    background-color: #eee; /* Light background for the word area */
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+#guesses-remaining {
+    font-size: 1em;
+    color: #555;
+}
+
+#guessed-letters {
+    font-size: 0.9em;
+    color: #777;
+    min-height: 20px; /* Prevents layout shift if empty */
+}
+
+#letter-input {
+    padding: 8px;
+    font-size: 1em;
+    width: 150px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#letter-input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+#hangman-game button { /* General styling for buttons within hangman game */
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#hangman-game button:hover {
+    background-color: #0056b3;
+}
+
+#hangman-game button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+
+#reset-hangman-button {
+    background-color: #28a745; /* Green color for reset */
+}
+
+#reset-hangman-button:hover {
+    background-color: #1e7e34;
+}
+
+#hangman-message {
+    margin-top: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    min-height: 24px; /* Prevent layout shift */
+    color: #dc3545; /* Default error/loss message color */
+}
+
+/* Style for success messages in hangman */
+#hangman-message.success {
+    color: #28a745; /* Green for success */
+}
+
+/* Word Scramble Game Styles */
+#scramble-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Space between elements */
+}
+
+#scrambled-word-display {
+    font-size: 2.5em; /* Large display for the scrambled word */
+    letter-spacing: 3px;
+    padding: 15px 25px;
+    background-color: #e9ecef; /* Light grey background */
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+    min-width: 200px; /* Ensure it has some width */
+    text-align: center;
+    font-weight: bold;
+    color: #495057;
+}
+
+#scramble-guess-input {
+    padding: 10px;
+    font-size: 1.1em;
+    width: 250px; /* Wider input field */
+    text-align: center;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+#scramble-guess-input:focus {
+    outline: none;
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+#scramble-game button { /* General styling for buttons within scramble game */
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#scramble-game button:hover {
+    background-color: #0056b3;
+}
+
+#scramble-game button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#new-scramble-button {
+    background-color: #28a745; /* Green for "New Word" */
+}
+
+#new-scramble-button:hover {
+    background-color: #1e7e34;
+}
+
+#scramble-message {
+    margin-top: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    min-height: 24px; /* Prevent layout shift */
+}
+
+/* Style for success messages in scramble */
+#scramble-message.success {
+    color: #28a745; /* Green for success */
+}
+
+/* Style for error messages in scramble */
+#scramble-message.error {
+    color: #dc3545; /* Red for error/incorrect */
+}
